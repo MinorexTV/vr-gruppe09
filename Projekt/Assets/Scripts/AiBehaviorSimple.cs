@@ -12,15 +12,16 @@ public class AiBehaviorSimple : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-       /* if (agent.position = targeposition){
-        float randomZ = Random.Range(-walkPointRange, walkPointRange);
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
+       /* if (agent.position = target.position){
+        float randomZ = Random.Range(-3, 3);
+        float randomX = Random.Range(-3, 3);
 
         target = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
         }*/
