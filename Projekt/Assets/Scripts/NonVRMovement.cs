@@ -6,9 +6,11 @@ using UnityEngine.InputSystem;
 
 public class NonVRMovement : MonoBehaviour
 {  
-    public float moveSpeed;
+    public float speed = 2.5f;
     public InputAction move;
     public Rigidbody rb;
+
+Vector3 moveDirection = Vector3.zero;
 
     void OnEnable()
     {
@@ -20,6 +22,18 @@ public class NonVRMovement : MonoBehaviour
         move.Disable();
     }
 
+
+  void Update()
+    {
+      moveDirection = move.ReadValue<Vector3>();
+    }
+
+ void FixedUpdate()
+    {
+    
+  rb.velocity = new Vector3(moveDirection.x * speed, moveDirection.y * speed , moveDirection.z * speed);
+    }
+/*
     void Start()
     {
     }
@@ -29,5 +43,7 @@ public class NonVRMovement : MonoBehaviour
     {
         Vector2 movementInput = move.ReadValue<Vector2>();
         rb.AddForce(movementInput.x * moveSpeed * Time.deltaTime, 0, movementInput.y * moveSpeed * Time.deltaTime);
-    }
+    }  */
+
+    
 }
