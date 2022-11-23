@@ -41,7 +41,13 @@ public class AiMovementNEW : MonoBehaviour
     void Update()
     {
         if (agent != null && agent.remainingDistance <= agent.stoppingDistance) {
+            //StartCoroutine(ExampleCoroutine());
             agent.SetDestination(RandomNavMeshLocation());
         }
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        yield return new WaitForSeconds(5);
     }
 }
