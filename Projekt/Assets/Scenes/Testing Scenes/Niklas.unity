@@ -291,7 +291,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0a3197998d131da4983033fd1ea65c04, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3ff8592fada9b3d41a46108a06650b40, type: 2}
 --- !u!4 &137978371
 Transform:
   m_ObjectHideFlags: 0
@@ -2811,6 +2811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_03
       objectReference: {fileID: 0}
+    - target: {fileID: 8957304962413023527, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}
 --- !u!4 &1075319358 stripped
@@ -3879,6 +3883,7 @@ GameObject:
   - component: {fileID: 1476075661}
   - component: {fileID: 1476075662}
   - component: {fileID: 1476075663}
+  - component: {fileID: 1476075664}
   m_Layer: 3
   m_Name: NonVRPlayer
   m_TagString: Untagged
@@ -4222,6 +4227,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
+--- !u!114 &1476075664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476075655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b216b69a0e000948959d3b4c50b5421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TintColors:
+  - {r: 0.41568628, g: 0.078431375, b: 0.078431375, a: 0}
+  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 0.20392157, g: 0.7882353, b: 0.8509804, a: 0}
+  - {r: 0.78431374, g: 0.40392157, b: 0.6666667, a: 0}
 --- !u!1 &1537327336
 GameObject:
   m_ObjectHideFlags: 0
