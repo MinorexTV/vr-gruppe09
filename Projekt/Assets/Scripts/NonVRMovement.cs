@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class NonVRMovement : MonoBehaviour
 {  
-    public float speed = 2.5f;
+    public float speed = 25f;
     public InputAction move;
     public Rigidbody rb;
 
@@ -25,7 +25,20 @@ Vector3 moveDirection = Vector3.zero;
 
   void Update()
     {
-      moveDirection = move.ReadValue<Vector3>();
+      moveDirection = move.ReadValue<Vector3>().normalized;
+
+      if (moveDirection != Vector3.zero){
+          transform.forward = moveDirection;
+      }
+
+
+      transform.position = new Vector3(
+        Mathf.Clamp(transform.position.x, -24f, 24f),
+        Mathf.Clamp(transform.position.y, -24f, 24f),
+        Mathf.Clamp(transform.position.z, -24f, 24f));
+
+
+     
     }
 
  void FixedUpdate()
