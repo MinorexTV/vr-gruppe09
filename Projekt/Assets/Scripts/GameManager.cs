@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json.Bson;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class ValueChangedEvent : UnityEvent<int>
@@ -61,5 +63,18 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
-    
+
+    public void ResetGame()
+    {
+        _guesses = 3;
+        SceneManager.LoadScene(1);
+    }
+
+    public void Update()
+    {
+        if (Keyboard.current.rKey.wasPressedThisFrame)
+        {
+            ResetGame();
+        }
+    }
 }

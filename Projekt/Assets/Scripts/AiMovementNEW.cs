@@ -22,6 +22,7 @@ public class AiMovementNEW : MonoBehaviour
             agent.SetDestination(RandomNavMeshLocation());
         }
 
+        agent.baseOffset = 0.92f;
 
     }
 
