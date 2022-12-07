@@ -13,9 +13,11 @@ public class AiMovementNEW : MonoBehaviour
 
     [Range(0,100)] public float speed;
     [Range(1, 50)] public float walkRadius;
+    public bool pausing;
     // Start is called before the first frame update
     void Start()
     {
+        pausing = false;
         agent = GetComponent<NavMeshAgent>();
         if (agent != null) {
             agent.speed = speed;
@@ -42,13 +44,18 @@ public class AiMovementNEW : MonoBehaviour
     void Update()
     {
         if (agent != null && agent.remainingDistance <= agent.stoppingDistance) {
-            //StartCoroutine(ExampleCoroutine());
-            agent.SetDestination(RandomNavMeshLocation());
+            //agent.SetDestination(RandomNavMeshLocation());
+            if (pausing == false){
+            StartCoroutine(ExampleCoroutine());
+            pausing = true;
+            }
         }
     }
 
     IEnumerator ExampleCoroutine()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(Random.Range(0, 3));
+        agent.SetDestination(RandomNavMeshLocation());
+        pausing = false;
     }
 }
