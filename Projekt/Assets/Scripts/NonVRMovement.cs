@@ -34,14 +34,14 @@ Vector3 moveDirection = Vector3.zero;
 
       transform.position = new Vector3(
         Mathf.Clamp(transform.position.x, -24f, 24f),
-        Mathf.Clamp(1/*transform.position.y*/, -24f, 24f),
+        Mathf.Clamp(1, -24f, 24f),
         Mathf.Clamp(transform.position.z, -24f, 24f));
     }
 
  void FixedUpdate()
     {
     
-  rb.velocity = new Vector3(moveDirection.x * speed, 0/*moveDirection.y * speed*/ , moveDirection.z * speed);
+  rb.velocity = new Vector3(moveDirection.x * speed, 0, moveDirection.z * speed);
     }
 /*
     void Start()

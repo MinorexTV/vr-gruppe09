@@ -343,6 +343,7 @@ MonoBehaviour:
   agent: {fileID: 8650225381313516251}
   speed: 5
   walkRadius: 15.3
+  pausing: 0
 --- !u!114 &1458340211595544687
 MonoBehaviour:
   m_ObjectHideFlags: 0
