@@ -58,4 +58,16 @@ public class AiMovementNEW : MonoBehaviour
         agent.SetDestination(RandomNavMeshLocation());
         pausing = false;
     }
+
+    void OnTriggerEnter(Collider col) {
+        if (col.tag == "NPC") {
+            agent.SetDestination(RandomNavMeshLocation());
+        }
+    }
+
+    void OnCollisionEnter(Collision col) {
+                if (col.gameObject.tag == "NonVRPlayer") {
+            agent.SetDestination(RandomNavMeshLocation());
+        }
+    }
 }
