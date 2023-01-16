@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/VR Won1.unity
+    guid: 1ef695b696b092e4bb1b7e7bfd735413
+  - enabled: 1
+    path: Assets/Scenes/NonVR Won1.unity
+    guid: 0a9a91ed6d352ca468eb818160fada63
+  - enabled: 0
     path: Assets/Scenes/VR Won.unity
     guid: 581d64f6b0652e24faab98452e7457db
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NonVR Won.unity
     guid: 16274453aab80984e893fade29881d9c
   m_configObjects:

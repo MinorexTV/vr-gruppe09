@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 4141935709484971390}
   m_Layer: 3
   m_Name: NonVRPlayer Mesh
-  m_TagString: Untagged
+  m_TagString: NonVRPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,10 +551,10 @@ GameObject:
   - component: {fileID: 4141935710012037005}
   - component: {fileID: 4141935710012037000}
   - component: {fileID: 4141935710012037003}
-  - component: {fileID: 4141935710012037002}
+  - component: {fileID: 2151700962243887785}
   m_Layer: 3
   m_Name: Eyes
-  m_TagString: Untagged
+  m_TagString: NonVRPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -624,8 +624,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4141935710012037002
-CapsuleCollider:
+--- !u!64 &2151700962243887785
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -634,7 +634,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}

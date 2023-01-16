@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Bson;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -15,13 +16,20 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private static int nextScene = 1;
     private int _guesses = 3;
+    private int _nonvrpoints = 0;
 
     public ValueChangedEvent guessesChanged = new ValueChangedEvent();
+    public ValueChangedEvent nonvrpointsChanged = new ValueChangedEvent();
 
     public int guesses
     {
         get { return _guesses; }
     }
+    public int nonvrpoints
+    {
+        get { return _nonvrpoints; }
+    }
+
 
     void Awake()
     {
@@ -67,6 +75,7 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         _guesses = 3;
+        _nonvrpoints = 0;
         SceneManager.LoadScene(1);
     }
 
@@ -76,5 +85,18 @@ public class GameManager : MonoBehaviour
         {
             ResetGame();
         }
+    }
+    public void collectible()
+    {
+        if (_nonvrpoints < 3)
+        {
+            _nonvrpoints += 1;
+            nonvrpointsChanged.Invoke(nonvrpoints);
+        }
+        if(_nonvrpoints==3)
+        {
+            SceneManager.LoadScene(3);
+        }
+        Debug.Log(_nonvrpoints);
     }
 }

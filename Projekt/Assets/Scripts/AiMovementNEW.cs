@@ -63,10 +63,12 @@ public class AiMovementNEW : MonoBehaviour
         if (col.tag == "NPC") {
             agent.SetDestination(RandomNavMeshLocation());
         }
-    }
+    } 
 
     void OnCollisionEnter(Collision col) {
-                if (col.gameObject.tag == "NonVRPlayer") {
+        if (col.gameObject.tag == "NonVRPlayer")
+        {
+            Debug.Log("crash nonvr player");
             agent.SetDestination(RandomNavMeshLocation());
         }
     }
