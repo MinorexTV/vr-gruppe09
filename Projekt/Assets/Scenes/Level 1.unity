@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcPrefab: {fileID: 8650225381313516252, guid: 48ebe98e7aeb37643aebbcb8cbd2f9cb, type: 3}
-  npcnumber: 15
+  npcnumber: 20
   obstacles:
     serializedVersion: 2
     m_Bits: 512
@@ -587,6 +587,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4141935708972573988, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4141935709228092658, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
       propertyPath: m_Name
       value: NonVRPlayer
@@ -648,7 +652,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4141935710012037002, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
 --- !u!850595691 &373868624
 LightingSettings:
@@ -755,7 +759,7 @@ Terrain:
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 250
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
