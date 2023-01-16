@@ -18,6 +18,7 @@ public class CheckIfPlayer : MonoBehaviour
     public void HitNPC()
     {
         GameManager.instance.ChangeGuesses(false);
+        Destroy(gameObject);
     }
 }
     

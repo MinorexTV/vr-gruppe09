@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcPrefab: {fileID: 8650225381313516252, guid: 48ebe98e7aeb37643aebbcb8cbd2f9cb, type: 3}
-  npcnumber: 10
+  npcnumber: 15
   obstacles:
     serializedVersion: 2
     m_Bits: 512
@@ -633,6 +633,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4141935709228092659, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141935709484971363, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
+      propertyPath: m_Drag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4141935709484971369, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
