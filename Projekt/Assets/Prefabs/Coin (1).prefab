@@ -149,6 +149,7 @@ MonoBehaviour:
   hoverSpeed: 1
   spinSpeed: 35
   randomRange: 5
+  coin: {fileID: 0}
 --- !u!64 &3006679540925809643
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -219,7 +220,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
