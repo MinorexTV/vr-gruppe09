@@ -11,15 +11,18 @@ public class AiMovementNEW : MonoBehaviour
 
     public NavMeshAgent agent;
 
-    [Range(0,100)] public float speed;
+    [Range(0, 100)] public float speed;
     [Range(1, 50)] public float walkRadius;
+
     public bool pausing;
+
     // Start is called before the first frame update
     void Start()
     {
         pausing = false;
         agent = GetComponent<NavMeshAgent>();
-        if (agent != null) {
+        if (agent != null)
+        {
             agent.speed = speed;
             agent.SetDestination(RandomNavMeshLocation());
         }
@@ -28,14 +31,17 @@ public class AiMovementNEW : MonoBehaviour
 
     }
 
-    public Vector3 RandomNavMeshLocation() {
+    public Vector3 RandomNavMeshLocation()
+    {
 
         Vector3 finalPosition = Vector3.zero;
         Vector3 randomPosition = Random.insideUnitSphere * walkRadius;
         randomPosition += transform.position;
-        if(NavMesh.SamplePosition(randomPosition, out NavMeshHit hit, walkRadius, 1)) {
+        if (NavMesh.SamplePosition(randomPosition, out NavMeshHit hit, walkRadius, 1))
+        {
             finalPosition = hit.position;
         }
+
         return finalPosition;
 
     }
@@ -43,11 +49,13 @@ public class AiMovementNEW : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent != null && agent.remainingDistance <= agent.stoppingDistance) {
+        if (agent != null && agent.remainingDistance <= agent.stoppingDistance)
+        {
             //agent.SetDestination(RandomNavMeshLocation());
-            if (pausing == false){
-            StartCoroutine(ExampleCoroutine());
-            pausing = true;
+            if (pausing == false)
+            {
+                StartCoroutine(ExampleCoroutine());
+                pausing = true;
             }
         }
     }
@@ -59,17 +67,13 @@ public class AiMovementNEW : MonoBehaviour
         pausing = false;
     }
 
-    void OnTriggerEnter(Collider col) {
-        if (col.tag == "NPC") {
-            agent.SetDestination(RandomNavMeshLocation());
-        }
-    } 
+    void OnTriggerEnter(Collider col)
+    {
+        agent.SetDestination(RandomNavMeshLocation());
+    }
 
-    void OnCollisionEnter(Collision col) {
-        if (col.gameObject.tag == "NonVRPlayer")
-        {
-            Debug.Log("crash nonvr player");
-            agent.SetDestination(RandomNavMeshLocation());
-        }
+    void OnCollisionEnter(Collision col)
+    {
+        agent.SetDestination(RandomNavMeshLocation());
     }
 }
