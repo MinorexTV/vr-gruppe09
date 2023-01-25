@@ -66,7 +66,7 @@ public class HoverController : MonoBehaviour
         if (other.gameObject.CompareTag("NonVRPlayer"))
 
         {
-            GameManager.instance.collectible();
+            GameManager.instance.Collectible();
             AudioSource.PlayClipAtPoint(coin, transform.position);
             Destroy(gameObject);
             //PlayParticle();

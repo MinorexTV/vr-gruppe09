@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class ValueChangedEvent : UnityEvent<int>
 {
 };
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         get { return _guesses; }
     }
+
     public int nonvrpoints
     {
         get { return _nonvrpoints; }
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(nextScene);
     }
-    
+
     public static void Load()
     {
         nextScene = SceneManager.GetActiveScene().buildIndex;
@@ -52,14 +54,20 @@ public class GameManager : MonoBehaviour
     {
         if (b)
         {
-            _guesses++;
+            if (guesses < 3)
+            {
+                _guesses++;
+                guessesChanged.Invoke(guesses);
+            }
         }
         else
         {
             _guesses--;
+            if (guesses > 0)
+            {
+                guessesChanged.Invoke(guesses);
+            }
         }
-
-        guessesChanged.Invoke(guesses);
 
         if (guesses <= 0)
         {
@@ -86,17 +94,20 @@ public class GameManager : MonoBehaviour
             ResetGame();
         }
     }
-    public void collectible()
+
+    public void Collectible()
     {
         if (_nonvrpoints < 3)
         {
             _nonvrpoints += 1;
             nonvrpointsChanged.Invoke(nonvrpoints);
         }
-        if(_nonvrpoints==3)
+
+        if (_nonvrpoints == 3)
         {
             SceneManager.LoadScene(3);
         }
+
         Debug.Log(_nonvrpoints);
     }
 }
