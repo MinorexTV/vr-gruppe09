@@ -7,21 +7,21 @@ public class TeleportController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject baseController;
-     [SerializeField]GameObject teleportController;
+     [SerializeField]GameObject actionController;
 
-     [SerializeField] InputActionReference teleportActivateRef;
+     [SerializeField] InputActionReference actionActivateRef;
     void Start()
     {
-       teleportActivateRef.action.performed += ActivateController;
-       teleportActivateRef.action.canceled += DeactivateController;
+       actionActivateRef.action.performed += ActivateController;
+       actionActivateRef.action.canceled += DeactivateController;
     }
 
     void ActivateController(InputAction.CallbackContext ctx){
         baseController.SetActive(false);
-        teleportController.SetActive(true);
+        actionController.SetActive(true);
     }
     void DeactivateController(InputAction.CallbackContext ctx){
         baseController.SetActive(true);
-        teleportController.SetActive(false);
+        actionController.SetActive(false);
     }
 }

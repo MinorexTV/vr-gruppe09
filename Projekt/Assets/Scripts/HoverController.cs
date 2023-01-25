@@ -40,13 +40,13 @@ public class HoverController : MonoBehaviour
 
         // Add a Rigidbody component to the object
         Rigidbody rb = gameObject.AddComponent<Rigidbody>();
-        
+
         // Set the Rigidbody's drag and angular drag to 0 so that it doesn't slow down
         rb.mass = 1;
         rb.drag = 0;
         rb.angularDrag = 0;
 
-        rb.isKinematic=true;
+        rb.isKinematic = true;
     }
 
     void Update()
@@ -63,7 +63,6 @@ public class HoverController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-
         if (other.gameObject.CompareTag("NonVRPlayer"))
 
         {

@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class GuessesController : MonoBehaviour
-{   [SerializeField]
-    private GameObject guess1;
-    [SerializeField]
-    private GameObject guess2;
-    [SerializeField]
-    private GameObject guess3;
+{
+    [SerializeField] private GameObject guess1;
+    [SerializeField] private GameObject guess2;
+    [SerializeField] private GameObject guess3;
 
     private void Start()
     {
