@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        if (Keyboard.current.rKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             ResetGame();
         }
