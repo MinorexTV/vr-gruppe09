@@ -15,9 +15,10 @@ public class ValueChangedEvent : UnityEvent<int>
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private static int nextScene = 1;
+    private static int nextScene = 2;
     private int _guesses = 3;
     private int _nonvrpoints = 0;
+    private int _npcs = 20;
 
     public ValueChangedEvent guessesChanged = new ValueChangedEvent();
     public ValueChangedEvent nonvrpointsChanged = new ValueChangedEvent();
@@ -30,6 +31,11 @@ public class GameManager : MonoBehaviour
     public int nonvrpoints
     {
         get { return _nonvrpoints; }
+    }
+
+    public int npcs
+    {
+        get { return _npcs; }
     }
 
 
@@ -75,6 +81,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ChangeNPCS(int val)
+    {
+        _npcs = val;
+    }
+
     public void VRPlayerWon()
     {
         SceneManager.LoadScene(2);
@@ -84,7 +95,7 @@ public class GameManager : MonoBehaviour
     {
         _guesses = 3;
         _nonvrpoints = 0;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void Update()
@@ -92,6 +103,11 @@ public class GameManager : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             ResetGame();
+        }
+
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Preload.unity
     guid: 77f1d67e0fadb8045abff9f4cbff1264
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 42c45a7cd35fbce4fb78a5de5702494f
+  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -18,11 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/NonVR Won.unity
     guid: 0a9a91ed6d352ca468eb818160fada63
   - enabled: 0
-    path: Assets/Scenes/VR Won.unity
-    guid: 581d64f6b0652e24faab98452e7457db
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/NonVR Won.unity
-    guid: 16274453aab80984e893fade29881d9c
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f64989e715c59cd409e3804590a6cf1e, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 69fd55ab686dd844a82aa937461337ef, type: 2}

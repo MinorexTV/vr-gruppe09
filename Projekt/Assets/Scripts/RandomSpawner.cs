@@ -3,14 +3,13 @@ using UnityEngine;
 public class RandomSpawner : MonoBehaviour
 {
     public GameObject npcPrefab;
-    public int npcnumber;
 
     public LayerMask obstacles;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < npcnumber; i++)
+        for (int i = 0; i < GameManager.instance.npcs; i++)
         {
             Vector3 randomSpawnPosition = transform.position + new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
             if (!Physics.CheckSphere(randomSpawnPosition, 1, obstacles))
