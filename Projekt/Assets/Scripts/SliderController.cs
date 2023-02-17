@@ -15,7 +15,7 @@ public class SliderController : MonoBehaviour
     {
         //slider.value = GameManager.instance.npcs;
     }
-    void Update()
+    public void UpdateNPCS()
     {
         textComp.text = slider.value.ToString();
         GameManager.instance.ChangeNPCS(Mathf.RoundToInt(slider.value));

@@ -29,11 +29,11 @@ public class PanelController : MonoBehaviour
     
     public void EnterSettings()
     {
-        slider.value =GameManager.instance.npcs;
+        settingspanel.SetActive(true);
         mainpanel.SetActive(false);
         howto1panel.SetActive(false);
         howto2panel.SetActive(false);
-        settingspanel.SetActive(true);
+        slider.value = GameManager.instance.npcs;
     }
 
     public void EnterMain()
@@ -46,17 +46,17 @@ public class PanelController : MonoBehaviour
 
     public void EnterHowto1()
     {
-        mainpanel.SetActive(false);
         howto1panel.SetActive(true);
+        mainpanel.SetActive(false);
         howto2panel.SetActive(false);
         settingspanel.SetActive(false);
     }
     
     public void EnterHowto2()
     {
+        howto2panel.SetActive(true);
         mainpanel.SetActive(false);
         howto1panel.SetActive(false);
-        howto2panel.SetActive(true);
         settingspanel.SetActive(false);
     }
 }
