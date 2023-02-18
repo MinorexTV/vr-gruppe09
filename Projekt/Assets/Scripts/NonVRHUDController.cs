@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class  NewBehaviourScript  : MonoBehaviour
-/* SCRIPT UMBENENNEN !!!  */
+public class  NonVRHUDController  : MonoBehaviour
+
 {
     [SerializeField] private GameObject coinSprite1;
     [SerializeField] private GameObject coinSprite2;
@@ -22,11 +22,10 @@ public class  NewBehaviourScript  : MonoBehaviour
         coinSprite3.SetActive(true);
         GameManager.instance.nonvrpointsChanged.AddListener(UpdateCoins);
 
-        coinSprite1.SetActive(true);
-        coinSprite2.SetActive(true);
-        coinSprite3.SetActive(true);
+        controllerSprite1.SetActive(true);
+        controllerSprite2.SetActive(true);
+        controllerSprite3.SetActive(true);
         GameManager.instance.guessesChanged.AddListener(UpdateController);
-        // GameManager.instance.nonvrpointsChanged.AddListener(UpdateController);
 
     }
 
@@ -56,21 +55,21 @@ public class  NewBehaviourScript  : MonoBehaviour
     {
         if (value == 3)
         {
-            controllerSprite1.SetActive(false);
-            controllerSprite2.SetActive(false);
-            controllerSprite3.SetActive(false);
+            controllerSprite1.SetActive(true);
+            controllerSprite2.SetActive(true);
+            controllerSprite3.SetActive(true);
         }
         else if (value == 2)
         {
-            controllerSprite1.SetActive(false);
-            controllerSprite2.SetActive(false);
-            controllerSprite3.SetActive(true);
+            controllerSprite1.SetActive(true);
+            controllerSprite2.SetActive(true);
+            controllerSprite3.SetActive(false);
         }
         else if (value == 1)
         {
-            controllerSprite1.SetActive(false);
-            controllerSprite2.SetActive(true);
-            controllerSprite3.SetActive(true);
+            controllerSprite1.SetActive(true);
+            controllerSprite2.SetActive(false);
+            controllerSprite3.SetActive(false);
         }
     }
 }

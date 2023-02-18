@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
 
         if (guesses <= 0)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
     }
 
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
     public void VRPlayerWon()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void ResetGame()
@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
 
         if (_nonvrpoints == 3)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
 
         Debug.Log(_nonvrpoints);
