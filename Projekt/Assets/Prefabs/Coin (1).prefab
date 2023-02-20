@@ -149,7 +149,9 @@ MonoBehaviour:
   hoverSpeed: 1
   spinSpeed: 35
   randomRange: 5
-  coin: {fileID: 0}
+  obstacles:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!64 &3006679540925809643
 MeshCollider:
   m_ObjectHideFlags: 0

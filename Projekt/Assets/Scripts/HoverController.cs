@@ -15,7 +15,8 @@ public class HoverController : MonoBehaviour
 
     public float randomRange = 5.0f;
 
-    public AudioClip coin;
+    private AudioClip coin;
+    public LayerMask obstacles;
 
     // The initial position of the object
     private Vector3 initialPosition;
@@ -35,18 +36,25 @@ public class HoverController : MonoBehaviour
 
         coin = GetComponent<AudioSource>().clip;
 
-        // Set the object's position to the initial position
-        transform.position = initialPosition;
+        if (Physics.CheckSphere(initialPosition, 1, obstacles))
+        {
+            Start();
+        }
+        else
+        {
+            transform.position = initialPosition;
 
-        // Add a Rigidbody component to the object
-        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+            // Add a Rigidbody component to the object
+            Rigidbody rb = gameObject.AddComponent<Rigidbody>();
 
-        // Set the Rigidbody's drag and angular drag to 0 so that it doesn't slow down
-        rb.mass = 1;
-        rb.drag = 0;
-        rb.angularDrag = 0;
+            // Set the Rigidbody's drag and angular drag to 0 so that it doesn't slow down
+            rb.mass = 1;
+            rb.drag = 0;
+            rb.angularDrag = 0;
 
-        rb.isKinematic = true;
+            rb.isKinematic = true; 
+        }
+        
     }
 
     void Update()

@@ -23,7 +23,7 @@ public class NonVRMovement : MonoBehaviour
     void Start()
     {
         Vector3 randomSpawnPosition = new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
-        if (!Physics.CheckSphere(randomSpawnPosition, 1, obstacles))
+        if (!Physics.CheckSphere(randomSpawnPosition, 3, obstacles))
         {
             transform.position += randomSpawnPosition;
         }

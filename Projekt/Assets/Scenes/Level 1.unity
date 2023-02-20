@@ -151,8 +151,9 @@ GameObject:
   - component: {fileID: 71441422}
   - component: {fileID: 71441421}
   - component: {fileID: 71441423}
+  - component: {fileID: 71441424}
   m_Layer: 0
-  m_Name: NPCSpawner/CoinSpawner
+  m_Name: NPCSpawner/CoinSpawner/ObstacleSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,6 +206,24 @@ MonoBehaviour:
   coin2: {fileID: 1315888974}
   coin3: {fileID: 1543610010}
   coin4: {fileID: 491710801}
+--- !u!114 &71441424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71441420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ff2628a79f6aa4a963c3a9e7c085fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flower: {fileID: 3899520030806763256, guid: 71a1387f87f11074ab58c5377ceda8c8, type: 3}
+  rock: {fileID: 8783306491908617939, guid: fa9abc253a518174a959059a1c7f8b45, type: 3}
+  tree: {fileID: 2222111361404534124, guid: 58a4204ed3301cd45a2c05eda6b7ba50, type: 3}
+  obstacles:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!43 &73728068
 Mesh:
   m_ObjectHideFlags: 0
@@ -689,7 +708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &145824107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -766,7 +785,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &145824111
 MonoBehaviour:
@@ -1147,7 +1166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4141935709228092659, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4141935709228092659, guid: 92a8b9678a1430d4d94148ef0b3b1229, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2520,7 +2539,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 18810ec0c6b92bf4a869fd50202f0d25, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: b717d2f3e4d2c944d90da47cb9734fc1, type: 2}
 --- !u!43 &670747781
 Mesh:
   m_ObjectHideFlags: 0
@@ -6373,7 +6392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2139033304
 BoxCollider:
   m_ObjectHideFlags: 0
