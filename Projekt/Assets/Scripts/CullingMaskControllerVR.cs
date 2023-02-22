@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class CullingMaskControllerVR : MonoBehaviour
 {
-    void Start()
+    [SerializeField] private Camera cam;
+    void Awake()
     {
         Invoke("ChangeCullingMask", 10f);
     }
 
     void ChangeCullingMask()
     {
-        GetComponent<Camera>().cullingMask =
+        cam.cullingMask =
             LayerMask.GetMask("Default", "TransparentFX", "Ignore Raycast", "NPC", "Water", "UI", "WhatIsGround",
                 "OnlyVR", "Obstacles");
     }

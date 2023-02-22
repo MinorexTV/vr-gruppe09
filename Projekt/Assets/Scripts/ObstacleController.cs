@@ -21,7 +21,7 @@ public class ObstacleController : MonoBehaviour
     private float treerad = 2f;
     
 
-    private void Awake()
+    void Awake() 
     {
         if (GameManager.instance.obstacles == 0)
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CullingMaskControllerNonVR : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
         Invoke("ChangeCullingMask", 10f);
     }
