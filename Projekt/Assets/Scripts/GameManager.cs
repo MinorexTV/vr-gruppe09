@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private int _guesses = 3;
     private int _nonvrpoints = 0;
     private int _npcs = 20;
+    private int _goldennpcs = 4;
     private int _obstacles = 0;
 
     public ValueChangedEvent guessesChanged = new ValueChangedEvent();
@@ -38,6 +39,12 @@ public class GameManager : MonoBehaviour
     {
         get { return _npcs; }
     }
+    
+    public int goldennpcs
+    {
+        get { return _goldennpcs; }
+    }
+    
     public int obstacles
     {
         get { return _obstacles; }
@@ -89,6 +96,15 @@ public class GameManager : MonoBehaviour
     public void ChangeNPCS(int val)
     {
         _npcs = val;
+        if (val > 5)
+        {
+            _goldennpcs = Mathf.RoundToInt(val / 5f);
+        }
+        else
+        {
+            _goldennpcs = 0;
+        }
+       
     }
     public void ChangeObstacles(int val)
     {

@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class VRAudioController : MonoBehaviour
 {
-    private AudioClip wrongGuess;
-    // Start is called before the first frame update
+   [SerializeField] private AudioClip wrongGuess;
+   [SerializeField] private AudioClip goldenGuess;
+    private int currentGuesses;
     void Start()
     {
+        currentGuesses = GameManager.instance.guesses;
         GameManager.instance.guessesChanged.AddListener(PlaySound);
-        wrongGuess = GetComponent<AudioSource>().clip;
     }
-
-    // Update is called once per frame
-    void PlaySound(int g)
+    
+    void PlaySound(int newGuesses)
     {
-        AudioSource.PlayClipAtPoint(wrongGuess, transform.position);
+        if (newGuesses >= currentGuesses)
+        {
+            AudioSource.PlayClipAtPoint(goldenGuess, transform.position);
+        }
+        else
+        {
+            AudioSource.PlayClipAtPoint(wrongGuess, transform.position);
+        }
+
+        currentGuesses = newGuesses;
     }
 }
