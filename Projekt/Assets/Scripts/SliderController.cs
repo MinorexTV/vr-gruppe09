@@ -7,17 +7,22 @@ using TMPro;
 
 public class SliderController : MonoBehaviour
 {
-    public Slider slider;
+    public Slider nonvrslider;
+    public Slider vrslider;
 
-    public TextMeshProUGUI textComp;
+    public TextMeshProUGUI nonvrtextComp;
+    public TextMeshProUGUI vrtextComp;
 
     void Awake()
     {
-        //slider.value = GameManager.instance.npcs;
+        vrslider.value = GameManager.instance.npcs;
+        nonvrslider.value = GameManager.instance.npcs;
     }
     public void UpdateNPCS()
     {
-        textComp.text = slider.value.ToString();
-        GameManager.instance.ChangeNPCS(Mathf.RoundToInt(slider.value));
+        GameManager.instance.ChangeNPCS(Mathf.RoundToInt(nonvrslider.value));
+        nonvrtextComp.text = nonvrslider.value.ToString();
+        vrtextComp.text = nonvrslider.value.ToString();
+        vrslider.value = nonvrslider.value;
     }
 }

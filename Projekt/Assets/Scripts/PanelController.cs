@@ -9,17 +9,27 @@ using UnityEngine.UI;
 public class PanelController : MonoBehaviour
 {
     public Slider slider;
-    public GameObject mainpanel;
-    public GameObject howto1panel;
-    public GameObject howto2panel;
-    public GameObject settingspanel;
+    public GameObject nonvrmainpanel;
+    public GameObject nonvrhowto1panel;
+    public GameObject nonvrhowto2panel;
+    public GameObject nonvrsettingspanel;
+    
+    public GameObject vrmainpanel;
+    public GameObject vrhowto1panel;
+    public GameObject vrhowto2panel;
+    public GameObject vrsettingspanel;
 
     void Awake()
     {
-        mainpanel.SetActive(true);
-        howto1panel.SetActive(false);
-        howto2panel.SetActive(false);
-        settingspanel.SetActive(false);
+        nonvrmainpanel.SetActive(true);
+        nonvrhowto1panel.SetActive(false);
+        nonvrhowto2panel.SetActive(false);
+        nonvrsettingspanel.SetActive(false);
+        
+        vrmainpanel.SetActive(true);
+        vrhowto1panel.SetActive(false);
+        vrhowto2panel.SetActive(false);
+        vrsettingspanel.SetActive(false);
     }
 
     public void StartGame()
@@ -29,34 +39,57 @@ public class PanelController : MonoBehaviour
     
     public void EnterSettings()
     {
-        settingspanel.SetActive(true);
-        mainpanel.SetActive(false);
-        howto1panel.SetActive(false);
-        howto2panel.SetActive(false);
+        nonvrsettingspanel.SetActive(true);
+        nonvrmainpanel.SetActive(false);
+        nonvrhowto1panel.SetActive(false);
+        nonvrhowto2panel.SetActive(false);
+        
+        vrsettingspanel.SetActive(true);
+        vrmainpanel.SetActive(false);
+        vrhowto1panel.SetActive(false);
+        vrhowto2panel.SetActive(false);
+        
         slider.value = GameManager.instance.npcs;
+        
+        
     }
 
     public void EnterMain()
     {
-        mainpanel.SetActive(true);
-        howto1panel.SetActive(false);
-        howto2panel.SetActive(false);
-        settingspanel.SetActive(false);
+        nonvrmainpanel.SetActive(true);
+        nonvrhowto1panel.SetActive(false);
+        nonvrhowto2panel.SetActive(false);
+        nonvrsettingspanel.SetActive(false);
+        
+        vrmainpanel.SetActive(true);
+        vrhowto1panel.SetActive(false);
+        vrhowto2panel.SetActive(false);
+        vrsettingspanel.SetActive(false);
     }
 
     public void EnterHowto1()
     {
-        howto1panel.SetActive(true);
-        mainpanel.SetActive(false);
-        howto2panel.SetActive(false);
-        settingspanel.SetActive(false);
+        nonvrhowto1panel.SetActive(true);
+        nonvrmainpanel.SetActive(false);
+        nonvrhowto2panel.SetActive(false);
+        nonvrsettingspanel.SetActive(false);
+        
+        vrhowto1panel.SetActive(true);
+        vrmainpanel.SetActive(false);
+        vrhowto2panel.SetActive(false);
+        vrsettingspanel.SetActive(false);
     }
     
     public void EnterHowto2()
     {
-        howto2panel.SetActive(true);
-        mainpanel.SetActive(false);
-        howto1panel.SetActive(false);
-        settingspanel.SetActive(false);
+        nonvrhowto2panel.SetActive(true);
+        nonvrmainpanel.SetActive(false);
+        nonvrhowto1panel.SetActive(false);
+        nonvrsettingspanel.SetActive(false);
+        
+        vrhowto2panel.SetActive(true);
+        vrmainpanel.SetActive(false);
+        vrhowto1panel.SetActive(false);
+        vrsettingspanel.SetActive(false);
     }
 }
