@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private int _nonvrpoints = 0;
     private int _npcs = 20;
     private int _goldennpcs = 4;
-    private int _obstacles = 0;
+    private int _obstacles = 2;
 
     public ValueChangedEvent guessesChanged = new ValueChangedEvent();
     public ValueChangedEvent nonvrpointsChanged = new ValueChangedEvent();
@@ -128,11 +128,6 @@ public class GameManager : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             ResetGame();
-        }
-
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(1);
         }
     }
 

@@ -1,7 +1,10 @@
+ using System;
  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+ using UnityEngine.InputSystem;
+ using UnityEngine.SceneManagement;
+ using UnityEngine.UI;
 
 public class  NonVRHUDController  : MonoBehaviour
 
@@ -11,12 +14,16 @@ public class  NonVRHUDController  : MonoBehaviour
     [SerializeField] private GameObject coinSprite3;
     [SerializeField] private GameObject controllerSprite1;
     [SerializeField] private GameObject controllerSprite2;
-    [SerializeField] private GameObject controllerSprite3; 
+    [SerializeField] private GameObject controllerSprite3;
+    [SerializeField] private GameObject optionPanel;
+    [SerializeField] private GameObject pausedPanel;
 
 
     private void Start()
     {
-
+        optionPanel.SetActive(false);
+        pausedPanel.SetActive(false);
+        
         coinSprite1.SetActive(true);
         coinSprite2.SetActive(true);
         coinSprite3.SetActive(true);
@@ -27,6 +34,45 @@ public class  NonVRHUDController  : MonoBehaviour
         controllerSprite3.SetActive(true);
         GameManager.instance.guessesChanged.AddListener(UpdateController);
 
+    }
+
+    void Update()
+    {
+        
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            if (optionPanel.activeSelf)
+            {
+                optionPanel.SetActive(false);
+                pausedPanel.SetActive(false);
+                Time.timeScale = 1;
+            }
+            else
+            {
+                optionPanel.SetActive(true);
+                pausedPanel.SetActive(true);
+                Time.timeScale = 0;
+                
+            }
+            
+        }
+    }
+
+    public void EnterSettings()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(2);
     }
 
     void UpdateCoins(int value)

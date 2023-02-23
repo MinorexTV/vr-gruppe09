@@ -9,9 +9,11 @@ public class ObstacleController : MonoBehaviour
     public GameObject flower;
     public GameObject rock;
     public GameObject tree;
+    public GameObject gras1;
+    public GameObject gras2;
     public LayerMask obstacles;
     
-    private int flowerint = 900;
+    private int flowerint = 400;
     private int rockint = 25;
     private int treeint = 20;
     
@@ -41,9 +43,11 @@ public class ObstacleController : MonoBehaviour
 
     void SpawnObstacles(GameObject model, int num, float rad)
     {
+        Vector3 randomSpawnPosition;
+      
         for (int i = 0; i < num; i++)
         {
-            Vector3 randomSpawnPosition = transform.position + new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
+            randomSpawnPosition = new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
             if (!Physics.CheckSphere(randomSpawnPosition, rad, obstacles))
             {
                 Instantiate(model, randomSpawnPosition, Quaternion.Euler( 0, Random.Range( 0, 4 ) * 90, 0 ));
