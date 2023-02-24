@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     private int _npcs = 20;
     private int _goldennpcs = 4;
     private int _obstacles = 2;
+    private int _vrwins= 0;
+    private int _nonvrwins= 0;
+
 
     public ValueChangedEvent guessesChanged = new ValueChangedEvent();
     public ValueChangedEvent nonvrpointsChanged = new ValueChangedEvent();
@@ -49,7 +52,16 @@ public class GameManager : MonoBehaviour
     {
         get { return _obstacles; }
     }
-
+    
+    public int vrwins
+    {
+        get { return _vrwins; }
+    }
+    
+    public int nonvrwins
+    {
+        get { return _nonvrwins; }
+    }
 
     void Awake()
     {
@@ -89,7 +101,8 @@ public class GameManager : MonoBehaviour
 
         if (guesses <= 0)
         {
-            SceneManager.LoadScene(4);
+            _nonvrwins++;
+            SceneManager.LoadScene(3);
         }
     }
 
@@ -113,6 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void VRPlayerWon()
     {
+        _vrwins++;
         SceneManager.LoadScene(3);
     }
 
@@ -141,7 +155,8 @@ public class GameManager : MonoBehaviour
 
         if (_nonvrpoints == 3)
         {
-            SceneManager.LoadScene(4);
+            _nonvrwins++;
+            SceneManager.LoadScene(3);
         }
 
         Debug.Log(_nonvrpoints);
