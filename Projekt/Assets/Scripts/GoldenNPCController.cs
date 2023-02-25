@@ -11,6 +11,5 @@ public class GoldenNPCController : MonoBehaviour
             GameManager.instance.ChangeGuesses(true);
             Destroy(gameObject);
         }
-        
     }
 }

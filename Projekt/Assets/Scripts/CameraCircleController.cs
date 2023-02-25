@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class CameraCircleController : MonoBehaviour
 {
-    public Transform target; 
-    public float radius = 10.0f; 
-    public float speed = 2.0f; 
-    public float height = 1.0f; 
+    public Transform target;
+    public float radius = 10.0f;
+    public float speed = 2.0f;
+    public float height = 1.0f;
 
-    private Vector3 offset; 
+    private Vector3 offset;
 
     void Start()
     {
-        offset = transform.position - target.position; 
+        offset = transform.position - target.position;
     }
 
     void Update()

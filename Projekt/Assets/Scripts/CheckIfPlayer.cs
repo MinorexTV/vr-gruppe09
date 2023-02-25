@@ -6,19 +6,23 @@ using UnityEngine.Events;
 
 public class CheckIfPlayer : MonoBehaviour
 {
-    [SerializeField]
-    private bool isPlayer = false;
-    
+    [SerializeField] private bool isPlayer = false;
+
 
     public void HitPlayer()
     {
-        GameManager.instance.VRPlayerWon();
+        if (Mathf.RoundToInt(Time.timeScale) == 1)
+        {
+            GameManager.instance.VRPlayerWon();
+        }
     }
-    
+
     public void HitNPC()
     {
-        GameManager.instance.ChangeGuesses(false);
-        Destroy(gameObject);
+        if (Mathf.RoundToInt(Time.timeScale) == 1)
+        {
+            GameManager.instance.ChangeGuesses(false);
+            Destroy(gameObject);
+        }
     }
 }
-    

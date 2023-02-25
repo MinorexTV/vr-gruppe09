@@ -12,29 +12,29 @@ public class ObstacleController : MonoBehaviour
     public GameObject gras1;
     public GameObject gras2;
     public LayerMask obstacles;
-    
+
     private int flowerint = 400;
     private int rockint = 25;
     private int treeint = 20;
-    
+
 
     private float flowerrad = 0.2f;
     private float rockrad = 1f;
     private float treerad = 2f;
-    
 
-    void Awake() 
+
+    void Awake()
     {
         if (GameManager.instance.obstacles == 0)
         {
             SpawnObstacles(flower, flowerint, flowerrad);
         }
-        
+
         else if (GameManager.instance.obstacles == 1)
         {
             SpawnObstacles(rock, rockint, rockrad);
         }
-        
+
         else if (GameManager.instance.obstacles == 2)
         {
             SpawnObstacles(tree, treeint, treerad);
@@ -44,13 +44,13 @@ public class ObstacleController : MonoBehaviour
     void SpawnObstacles(GameObject model, int num, float rad)
     {
         Vector3 randomSpawnPosition;
-      
+
         for (int i = 0; i < num; i++)
         {
             randomSpawnPosition = new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
             if (!Physics.CheckSphere(randomSpawnPosition, rad, obstacles))
             {
-                Instantiate(model, randomSpawnPosition, Quaternion.Euler( 0, Random.Range( 0, 4 ) * 90, 0 ));
+                Instantiate(model, randomSpawnPosition, Quaternion.Euler(0, Random.Range(0, 4) * 90, 0));
             }
             else
             {
@@ -58,7 +58,9 @@ public class ObstacleController : MonoBehaviour
             }
         }
     }
-    static float randomFloat(float min, float max){
+
+    static float randomFloat(float min, float max)
+    {
         System.Random random = new System.Random();
         double val = (random.NextDouble() * (max - min) + min);
         return (float)val;

@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     private int _npcs = 20;
     private int _goldennpcs = 4;
     private int _obstacles = 2;
-    private int _vrwins= 0;
-    private int _nonvrwins= 0;
+    private int _vrwins = 0;
+    private int _nonvrwins = 0;
 
 
     public ValueChangedEvent guessesChanged = new ValueChangedEvent();
@@ -42,22 +42,22 @@ public class GameManager : MonoBehaviour
     {
         get { return _npcs; }
     }
-    
+
     public int goldennpcs
     {
         get { return _goldennpcs; }
     }
-    
+
     public int obstacles
     {
         get { return _obstacles; }
     }
-    
+
     public int vrwins
     {
         get { return _vrwins; }
     }
-    
+
     public int nonvrwins
     {
         get { return _nonvrwins; }
@@ -117,8 +117,8 @@ public class GameManager : MonoBehaviour
         {
             _goldennpcs = 0;
         }
-       
     }
+
     public void ChangeObstacles(int val)
     {
         _obstacles = val;

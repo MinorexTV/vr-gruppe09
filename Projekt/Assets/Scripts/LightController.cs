@@ -1,12 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
- 
+
 public class LightController : MonoBehaviour
 {
- 
     public List<Light> Lights;
- 
+
     void OnPreRender()
     {
         foreach (Light light in Lights)
@@ -14,7 +13,7 @@ public class LightController : MonoBehaviour
             light.enabled = false;
         }
     }
- 
+
     void OnPostRender()
     {
         foreach (Light light in Lights)

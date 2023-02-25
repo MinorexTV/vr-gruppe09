@@ -1,12 +1,12 @@
- using System;
- using System.Collections;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- using UnityEngine.InputSystem;
- using UnityEngine.SceneManagement;
- using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class  NonVRHUDController  : MonoBehaviour
+public class NonVRHUDController : MonoBehaviour
 
 {
     [SerializeField] private GameObject coinSprite1;
@@ -23,22 +23,20 @@ public class  NonVRHUDController  : MonoBehaviour
     {
         optionPanel.SetActive(false);
         pausedPanel.SetActive(false);
-        
-        coinSprite1.SetActive(true);
-        coinSprite2.SetActive(true);
-        coinSprite3.SetActive(true);
+
+        coinSprite1.SetActive(false);
+        coinSprite2.SetActive(false);
+        coinSprite3.SetActive(false);
         GameManager.instance.nonvrpointsChanged.AddListener(UpdateCoins);
 
         controllerSprite1.SetActive(true);
         controllerSprite2.SetActive(true);
         controllerSprite3.SetActive(true);
         GameManager.instance.guessesChanged.AddListener(UpdateController);
-
     }
 
     void Update()
     {
-        
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (optionPanel.activeSelf)
@@ -52,9 +50,7 @@ public class  NonVRHUDController  : MonoBehaviour
                 optionPanel.SetActive(true);
                 pausedPanel.SetActive(true);
                 Time.timeScale = 0;
-                
             }
-            
         }
     }
 
@@ -79,21 +75,21 @@ public class  NonVRHUDController  : MonoBehaviour
     {
         if (value == 3)
         {
-            coinSprite1.SetActive(false);
-            coinSprite2.SetActive(false);
-            coinSprite3.SetActive(false);
+            coinSprite1.SetActive(true);
+            coinSprite2.SetActive(true);
+            coinSprite3.SetActive(true);
         }
         else if (value == 2)
         {
-            coinSprite1.SetActive(false);
-            coinSprite2.SetActive(false);
-            coinSprite3.SetActive(true);
+            coinSprite1.SetActive(true);
+            coinSprite2.SetActive(true);
+            coinSprite3.SetActive(false);
         }
         else if (value == 1)
         {
-            coinSprite1.SetActive(false);
-            coinSprite2.SetActive(true);
-            coinSprite3.SetActive(true);
+            coinSprite1.SetActive(true);
+            coinSprite2.SetActive(false);
+            coinSprite3.SetActive(false);
         }
     }
 
@@ -119,4 +115,3 @@ public class  NonVRHUDController  : MonoBehaviour
         }
     }
 }
- 

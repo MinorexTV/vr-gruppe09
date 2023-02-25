@@ -52,9 +52,8 @@ public class HoverController : MonoBehaviour
             rb.drag = 0;
             rb.angularDrag = 0;
 
-            rb.isKinematic = true; 
+            rb.isKinematic = true;
         }
-        
     }
 
     void Update()

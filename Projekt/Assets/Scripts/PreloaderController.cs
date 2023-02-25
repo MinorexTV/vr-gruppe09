@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class PreloaderController : MonoBehaviour
 {
-  private void Awake()
-  {
-    if (GameObject.Find("Game Manager") == null)
+    private void Awake()
     {
-      GameManager.Load();
+        if (GameObject.Find("Game Manager") == null)
+        {
+            GameManager.Load();
+        }
     }
-  }
 }

@@ -7,7 +7,7 @@ public class ScoreboardController : MonoBehaviour
 {
     public TMP_Text vrscore;
     public TMP_Text nonvrscore;
-    
+
     void Awake()
     {
         vrscore.text = "vr: " + GameManager.instance.vrwins;

@@ -10,9 +10,10 @@ public class RandomSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < GameManager.instance.npcs-GameManager.instance.goldennpcs; i++)
+        for (int i = 0; i < GameManager.instance.npcs - GameManager.instance.goldennpcs; i++)
         {
-            Vector3 randomSpawnPosition = transform.position + new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
+            Vector3 randomSpawnPosition =
+                transform.position + new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
             if (!Physics.CheckSphere(randomSpawnPosition, 1, obstacles))
             {
                 Instantiate(npcPrefab, randomSpawnPosition, Quaternion.identity);
@@ -22,9 +23,11 @@ public class RandomSpawner : MonoBehaviour
                 i--;
             }
         }
+
         for (int i = 0; i < GameManager.instance.goldennpcs; i++)
         {
-            Vector3 randomSpawnPosition = transform.position + new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
+            Vector3 randomSpawnPosition =
+                transform.position + new Vector3(randomFloat(-24f, +24f), 0, randomFloat(-24f, +24f));
             if (!Physics.CheckSphere(randomSpawnPosition, 1, obstacles))
             {
                 Instantiate(goldennpcPrefab, randomSpawnPosition, Quaternion.identity);
@@ -35,7 +38,9 @@ public class RandomSpawner : MonoBehaviour
             }
         }
     }
-    static float randomFloat(float min, float max){
+
+    static float randomFloat(float min, float max)
+    {
         System.Random random = new System.Random();
         double val = (random.NextDouble() * (max - min) + min);
         return (float)val;
