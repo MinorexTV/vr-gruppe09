@@ -15,7 +15,7 @@ public class ValueChangedEvent : UnityEvent<int>
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private static int nextScene = 2;
+    private static int nextScene = 1;
     private int _guesses = 3;
     private int _nonvrpoints = 0;
     private int _npcs = 20;
