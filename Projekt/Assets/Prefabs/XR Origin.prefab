@@ -2914,6 +2914,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d534290f8da314a9862ce2d0a65a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrongGuess: {fileID: 0}
+  goldenGuess: {fileID: 0}
+  fullGuesses: {fileID: 0}
 --- !u!82 &8037832179021355215
 AudioSource:
   m_ObjectHideFlags: 0

@@ -5462,6 +5462,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2146174309}
+    - target: {fileID: 2209209433095061766, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 5342815602996709161, guid: 3e90feb668693d4468474e13cd522024, type: 3}
     - target: {fileID: 2664701220784580746, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5571,9 +5575,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 952510848}
     - target: {fileID: 5190322431683261296, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 5342815602996709161, guid: 3e90feb668693d4468474e13cd522024, type: 3}
+    - target: {fileID: 5190322431683261296, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
       propertyPath: m_AnimateModel
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5190322431770526664, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 5342815602996709161, guid: 3e90feb668693d4468474e13cd522024, type: 3}
     - target: {fileID: 5190322431770526665, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 0
@@ -5642,6 +5654,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5190322432758098360, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 5342815602996709161, guid: 3e90feb668693d4468474e13cd522024, type: 3}
     - target: {fileID: 5190322432758098361, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 576
@@ -5658,6 +5674,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 289383440}
+    - target: {fileID: 5190322433329898909, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 5342815602996709161, guid: 3e90feb668693d4468474e13cd522024, type: 3}
     - target: {fileID: 5192246641089622864, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5710,6 +5730,10 @@ PrefabInstance:
       propertyPath: m_RaycastMask.m_Bits
       value: 576
       objectReference: {fileID: 0}
+    - target: {fileID: 6132231776242117460, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
+      propertyPath: m_ModelPrefab
+      value: 
+      objectReference: {fileID: 5342815602996709161, guid: 3e90feb668693d4468474e13cd522024, type: 3}
     - target: {fileID: 6701094773675367204, guid: 42fa484b9eeeed94aae56653275b10d7, type: 3}
       propertyPath: m_Mesh
       value: 

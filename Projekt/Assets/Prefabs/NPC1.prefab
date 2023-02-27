@@ -260,7 +260,7 @@ MonoBehaviour:
     m_Bits: 1
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
-  m_CustomReticle: {fileID: 92881595085681583, guid: 7afc2bcc9ad8eda42bd00bf7b12d0650, type: 3}
+  m_CustomReticle: {fileID: 4942363485845106653, guid: 901f0a6e4f9e72a43883698564ea8fa1, type: 3}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
