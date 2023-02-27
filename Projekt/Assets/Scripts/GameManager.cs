@@ -145,15 +145,6 @@ public class GameManager : MonoBehaviour
         _nonvrpoints = 0;
         SceneManager.LoadScene(2);
     }
-
-    public void Update()
-    {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            ResetGame();
-        }
-    }
-
     public void ChangeFirstRound(bool firstroundbool)
     {
         _firstround = firstroundbool;
