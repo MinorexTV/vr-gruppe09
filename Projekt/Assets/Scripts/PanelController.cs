@@ -15,26 +15,31 @@ public class PanelController : MonoBehaviour
     public GameObject nonvrmainpanel;
     public GameObject nonvrhowto1panel;
     public GameObject nonvrhowto2panel;
+    public GameObject nonvrhowto3panel;
     public GameObject nonvrsettingspanel;
 
     public GameObject vrmainpanel;
     public GameObject vrhowto1panel;
     public GameObject vrhowto2panel;
+    public GameObject vrhowto3panel;
     public GameObject vrsettingspanel;
 
     public GameObject vrmainpanel2;
     public GameObject vrhowto1panel2;
     public GameObject vrhowto2panel2;
+    public GameObject vrhowto3panel2;
     public GameObject vrsettingspanel2;
 
     public GameObject vrmainpanel3;
     public GameObject vrhowto1panel3;
     public GameObject vrhowto2panel3;
+    public GameObject vrhowto3panel3;
     public GameObject vrsettingspanel3;
 
     public GameObject vrmainpanel4;
     public GameObject vrhowto1panel4;
     public GameObject vrhowto2panel4;
+    public GameObject vrhowto3panel4;
     public GameObject vrsettingspanel4;
 
     void Awake()
@@ -42,26 +47,31 @@ public class PanelController : MonoBehaviour
         nonvrmainpanel.SetActive(true);
         nonvrhowto1panel.SetActive(false);
         nonvrhowto2panel.SetActive(false);
+        nonvrhowto3panel.SetActive(false);
         nonvrsettingspanel.SetActive(false);
 
         vrmainpanel.SetActive(true);
         vrhowto1panel.SetActive(false);
         vrhowto2panel.SetActive(false);
+        vrhowto3panel.SetActive(false);
         vrsettingspanel.SetActive(false);
 
         vrmainpanel2.SetActive(true);
         vrhowto1panel2.SetActive(false);
         vrhowto2panel2.SetActive(false);
+        vrhowto3panel2.SetActive(false);
         vrsettingspanel2.SetActive(false);
 
         vrmainpanel3.SetActive(true);
         vrhowto1panel3.SetActive(false);
         vrhowto2panel3.SetActive(false);
+        vrhowto3panel3.SetActive(false);
         vrsettingspanel3.SetActive(false);
 
         vrmainpanel4.SetActive(true);
         vrhowto1panel4.SetActive(false);
         vrhowto2panel4.SetActive(false);
+        vrhowto3panel4.SetActive(false);
         vrsettingspanel4.SetActive(false);
     }
 
@@ -76,26 +86,31 @@ public class PanelController : MonoBehaviour
         nonvrmainpanel.SetActive(false);
         nonvrhowto1panel.SetActive(false);
         nonvrhowto2panel.SetActive(false);
+        nonvrhowto3panel.SetActive(false);
 
         vrsettingspanel.SetActive(true);
         vrmainpanel.SetActive(false);
         vrhowto1panel.SetActive(false);
         vrhowto2panel.SetActive(false);
+        vrhowto3panel.SetActive(false);
 
         vrsettingspanel2.SetActive(true);
         vrmainpanel2.SetActive(false);
         vrhowto1panel2.SetActive(false);
         vrhowto2panel2.SetActive(false);
+        vrhowto3panel2.SetActive(false);
 
         vrsettingspanel3.SetActive(true);
         vrmainpanel3.SetActive(false);
         vrhowto1panel3.SetActive(false);
         vrhowto2panel3.SetActive(false);
+        vrhowto3panel3.SetActive(false);
 
         vrsettingspanel4.SetActive(true);
         vrmainpanel4.SetActive(false);
         vrhowto1panel4.SetActive(false);
         vrhowto2panel4.SetActive(false);
+        vrhowto3panel4.SetActive(false);
 
         slider1.value = GameManager.instance.npcs;
         slider2.value = GameManager.instance.npcs;
@@ -108,26 +123,31 @@ public class PanelController : MonoBehaviour
         nonvrmainpanel.SetActive(true);
         nonvrhowto1panel.SetActive(false);
         nonvrhowto2panel.SetActive(false);
+        nonvrhowto3panel.SetActive(false);
         nonvrsettingspanel.SetActive(false);
 
         vrmainpanel.SetActive(true);
         vrhowto1panel.SetActive(false);
         vrhowto2panel.SetActive(false);
+        vrhowto3panel.SetActive(false);
         vrsettingspanel.SetActive(false);
 
         vrmainpanel2.SetActive(true);
         vrhowto1panel2.SetActive(false);
         vrhowto2panel2.SetActive(false);
+        vrhowto3panel2.SetActive(false);
         vrsettingspanel2.SetActive(false);
 
         vrmainpanel3.SetActive(true);
         vrhowto1panel3.SetActive(false);
         vrhowto2panel3.SetActive(false);
+        vrhowto3panel3.SetActive(false);
         vrsettingspanel3.SetActive(false);
 
         vrmainpanel4.SetActive(true);
         vrhowto1panel4.SetActive(false);
         vrhowto2panel4.SetActive(false);
+        vrhowto3panel4.SetActive(false);
         vrsettingspanel4.SetActive(false);
     }
 
@@ -136,26 +156,31 @@ public class PanelController : MonoBehaviour
         nonvrhowto1panel.SetActive(true);
         nonvrmainpanel.SetActive(false);
         nonvrhowto2panel.SetActive(false);
+        nonvrhowto3panel.SetActive(false);
         nonvrsettingspanel.SetActive(false);
 
         vrhowto1panel.SetActive(true);
         vrmainpanel.SetActive(false);
         vrhowto2panel.SetActive(false);
+        vrhowto3panel.SetActive(false);
         vrsettingspanel.SetActive(false);
 
         vrhowto1panel2.SetActive(true);
         vrmainpanel2.SetActive(false);
         vrhowto2panel2.SetActive(false);
+        vrhowto3panel2.SetActive(false);
         vrsettingspanel2.SetActive(false);
 
         vrhowto1panel3.SetActive(true);
         vrmainpanel3.SetActive(false);
         vrhowto2panel3.SetActive(false);
+        vrhowto3panel3.SetActive(false);
         vrsettingspanel3.SetActive(false);
 
         vrhowto1panel4.SetActive(true);
         vrmainpanel4.SetActive(false);
         vrhowto2panel4.SetActive(false);
+        vrhowto3panel4.SetActive(false);
         vrsettingspanel4.SetActive(false);
     }
 
@@ -164,26 +189,64 @@ public class PanelController : MonoBehaviour
         nonvrhowto2panel.SetActive(true);
         nonvrmainpanel.SetActive(false);
         nonvrhowto1panel.SetActive(false);
+        nonvrhowto3panel.SetActive(false);
         nonvrsettingspanel.SetActive(false);
 
         vrhowto2panel.SetActive(true);
         vrmainpanel.SetActive(false);
         vrhowto1panel.SetActive(false);
+        vrhowto3panel.SetActive(false);
         vrsettingspanel.SetActive(false);
 
         vrhowto2panel2.SetActive(true);
         vrmainpanel2.SetActive(false);
         vrhowto1panel2.SetActive(false);
+        vrhowto3panel2.SetActive(false);
         vrsettingspanel2.SetActive(false);
 
         vrhowto2panel3.SetActive(true);
         vrmainpanel3.SetActive(false);
         vrhowto1panel3.SetActive(false);
+        vrhowto3panel3.SetActive(false);
         vrsettingspanel3.SetActive(false);
 
         vrhowto2panel4.SetActive(true);
         vrmainpanel4.SetActive(false);
         vrhowto1panel4.SetActive(false);
+        vrhowto3panel4.SetActive(false);
+        vrsettingspanel4.SetActive(false);
+    }
+
+    public void EnterHowto3()
+    {
+        nonvrhowto2panel.SetActive(false);
+        nonvrmainpanel.SetActive(false);
+        nonvrhowto1panel.SetActive(false);
+        nonvrhowto3panel.SetActive(true);
+        nonvrsettingspanel.SetActive(false);
+
+        vrhowto2panel.SetActive(false);
+        vrmainpanel.SetActive(false);
+        vrhowto1panel.SetActive(false);
+        vrhowto3panel.SetActive(true);
+        vrsettingspanel.SetActive(false);
+
+        vrhowto2panel2.SetActive(false);
+        vrmainpanel2.SetActive(false);
+        vrhowto1panel2.SetActive(false);
+        vrhowto3panel2.SetActive(true);
+        vrsettingspanel2.SetActive(false);
+
+        vrhowto2panel3.SetActive(false);
+        vrmainpanel3.SetActive(false);
+        vrhowto1panel3.SetActive(false);
+        vrhowto3panel3.SetActive(true);
+        vrsettingspanel3.SetActive(false);
+
+        vrhowto2panel4.SetActive(false);
+        vrmainpanel4.SetActive(false);
+        vrhowto1panel4.SetActive(false);
+        vrhowto3panel4.SetActive(true);
         vrsettingspanel4.SetActive(false);
     }
 }
