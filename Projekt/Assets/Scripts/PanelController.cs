@@ -77,7 +77,7 @@ public class PanelController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(2);
+       GameManager.instance.ResetGame();
     }
 
     public void EnterSettings()

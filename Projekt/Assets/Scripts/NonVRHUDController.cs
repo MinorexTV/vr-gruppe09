@@ -68,7 +68,7 @@ public class NonVRHUDController : MonoBehaviour
     public void RestartLevel()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(2);
+        GameManager.instance.ResetGame();
     }
 
     void UpdateCoins(int value)
