@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private int _obstacles = 2;
     private int _vrwins = 0;
     private int _nonvrwins = 0;
+    private bool _firstround = true;
 
 
     public ValueChangedEvent guessesChanged = new ValueChangedEvent();
@@ -63,6 +64,10 @@ public class GameManager : MonoBehaviour
         get { return _nonvrwins; }
     }
 
+    public bool firstround
+    {
+        get { return _firstround; }
+    }
     void Awake()
     {
         if (instance == null)
@@ -84,7 +89,11 @@ public class GameManager : MonoBehaviour
     {
         if (b)
         {
-            if (guesses < 3)
+            if (guesses == 3)
+            {
+                guessesChanged.Invoke(guesses);
+            }
+            else if (guesses < 3)
             {
                 _guesses++;
                 guessesChanged.Invoke(guesses);
@@ -145,6 +154,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ChangeFirstRound(bool firstroundbool)
+    {
+        _firstround = firstroundbool;
+    }
+
     public void Collectible()
     {
         if (_nonvrpoints < 3)
@@ -158,7 +172,5 @@ public class GameManager : MonoBehaviour
             _nonvrwins++;
             SceneManager.LoadScene(3);
         }
-
-        Debug.Log(_nonvrpoints);
     }
 }

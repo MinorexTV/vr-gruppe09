@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GoldenNPCController : MonoBehaviour
 {
+    private bool destroy;
     public void HitGoldenNPC()
     {
-        if (GameManager.instance.guesses < 3)
+        destroy = GameManager.instance.guesses != 3; 
+        GameManager.instance.ChangeGuesses(true);
+        if (destroy)
         {
-            GameManager.instance.ChangeGuesses(true);
             Destroy(gameObject);
         }
     }

@@ -12,8 +12,17 @@ public class CullingMaskController : MonoBehaviour
 
     void Awake()
     {
-        Invoke("ChangeCullingMask", 10f);
-        Invoke("ChangeRaycastMask", 10f);
+        if (GameManager.instance.firstround)
+        {
+            Invoke("ChangeCullingMask", 10f);
+            Invoke("ChangeRaycastMask", 10f);
+            GameManager.instance.ChangeFirstRound(false);
+        }
+        else
+        {
+            ChangeCullingMask();
+            ChangeRaycastMask();
+        }
     }
 
     void ChangeCullingMask()

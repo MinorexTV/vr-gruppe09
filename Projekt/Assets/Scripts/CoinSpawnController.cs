@@ -7,7 +7,7 @@ public class CoinSpawnController : MonoBehaviour
     public GameObject coin3;
     public GameObject coin4;
 
-    void Start()
+    void Awake()
     {
         coin1.SetActive(false);
         coin2.SetActive(false);

@@ -29,7 +29,6 @@ public class NonVRMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log("Hit Obstacle");
             Start();
         }
     }
